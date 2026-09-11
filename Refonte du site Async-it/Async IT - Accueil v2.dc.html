@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: #04060C; font-family: Archivo, Helvetica, sans-serif; }
+  * { box-sizing: border-box; }
+  a { color: inherit; text-decoration: none; }
+  a:hover { color: inherit; }
+  h1, h2, h3, h4, p, ul { margin: 0; }
+  ul { padding: 0; list-style: none; }
+</style>
+</helmet>
+
+<section style="display: flex; flex-direction: column;">
+  <div id="2a" style="display: flex; justify-content: center; width: 100%;">
+      <div style="width: 100%; background: #04060C; color: #EEF2F8; overflow: hidden;">
+
+        <sc-if value="{{ showEmergencyBar }}" hint-placeholder-val="{{ true }}">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 10px 18px; flex-wrap: wrap; padding: 10px clamp(16px, 4.5vw, 84px); background: #080C14; border-bottom: 1px solid rgba(255,255,255,0.07); font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.06em; color: #9FB0C8;">
+          <span style="display: flex; align-items: center; gap: 9px;"><span style="width: 6px; height: 6px; background: #5B9BFF; box-shadow: 0 0 10px #5B9BFF;"></span>HOTLINE OUVERTE — PANNE BLOQUANTE PRISE EN CHARGE SOUS 2 H OUVRÉES</span>
+          <a href="tel:+41215124040" style="color: #EEF2F8;">021 512 40 40 →</a>
+        </div>
+        </sc-if>
+
+        <div style="position: relative; isolation: isolate; overflow: hidden; background: radial-gradient(130% 88% at 50% 132%, rgba(24,62,170,0.35) 0%, rgba(8,16,40,0.2) 45%, rgba(4,6,12,0) 78%), repeating-linear-gradient(90deg, rgba(255,255,255,0.035) 0 1px, rgba(255,255,255,0) 1px 76px), #04060C; padding: 30px clamp(16px, 4.5vw, 84px) 0;">
+
+          <div style="position: absolute; inset: 0; z-index: -1; pointer-events: none; overflow: hidden; background: #04060C;">
+            <x-import component-from-global-scope="async-arcs" from="./arcs.js" period="150" speed="6" saturation="0.7" blur="26" hint-size="100%,100%" style="position: absolute; inset: 0;"></x-import>
+          </div>
+
+          <div style="position: relative; display: flex; align-items: center; justify-content: space-between; gap: 14px 20px; flex-wrap: wrap; padding: 12px 20px; border: 1px solid rgba(255,255,255,0.1); border-radius: 28px; background: rgba(8,12,22,0.55); backdrop-filter: blur(10px);">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <div style="width: 26px; height: 26px; border-radius: 7px; background: linear-gradient(150deg, #8FBAFF, #1E62E0); color: #04060C; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 15px;">A</div>
+              <span style="font-weight: 600; font-size: 14.5px; letter-spacing: -0.01em;">Async IT</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px 22px; flex-wrap: wrap; font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; color: #B6C4D8;">
+              <a href="./Services.dc.html">Services</a>
+              <a href="#forfaits">Forfaits</a>
+              <a href="./Nouvelles.dc.html">Références</a>
+              <a href="./Nouvelles.dc.html">Nouvelles</a>
+              <a href="./Support-a-distance.dc.html">Support</a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 14px; flex-wrap: wrap;">
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: #7E8FA8;"><span style="color: #EEF2F8;">FR</span> / EN</span>
+              <a href="./Contact.dc.html" style="display: flex; align-items: center; gap: 9px; background: #F4F7FB; color: #04060C; padding: 8px 8px 8px 16px; border-radius: 100px; font-size: 13px; font-weight: 600;">Prenons un café <span style="display: flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; background: #04060C; color: #F4F7FB; font-size: 11px;">→</span></a>
+            </div>
+          </div>
+
+          <div style="position: relative; padding: clamp(48px, 8vw, 92px) 4px 0; display: flex; flex-direction: column; gap: 26px; max-width: 720px;">
+            <span style="display: flex; align-items: center; gap: 9px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #A8C2EA;"><span style="width: 7px; height: 7px; background: #5B9BFF;"></span>Partenaire IT · Morges · Suisse romande</span>
+            <h1 style="font-size: clamp(34px, 6.2vw, 74px); line-height: 1; letter-spacing: -0.042em; font-weight: 600; text-wrap: pretty; max-width: 13.5em;">L'informatique qui <span style="font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-weight: 400; letter-spacing: -0.01em;">s'efface</span> derrière votre métier.</h1>
+            <p style="font-size: clamp(15.5px, 1.6vw, 18px); line-height: 1.55; color: #B9C6D8; max-width: 30em;">Postes, serveurs, téléphonie, réseau et cybersécurité — supervisés en continu, documentés noir sur blanc, tenus par un interlocuteur unique. Pour les PME comme pour les particuliers.</p>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; padding-top: 4px;">
+              <a href="./Contact.dc.html" style="display: flex; align-items: center; gap: 10px; background: #F4F7FB; color: #04060C; padding: 12px 12px 12px 22px; border-radius: 100px; font-size: 15px; font-weight: 600; white-space: nowrap;">Audit gratuit de votre parc <span style="display: flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 50%; background: #04060C; color: #F4F7FB; font-size: 12px; flex: 0 0 auto;">→</span></a>
+              <a href="./Support-a-distance.dc.html" style="border: 1px solid rgba(255,255,255,0.28); padding: 13px 22px; border-radius: 100px; font-size: 15px; font-weight: 600; color: #EEF2F8; white-space: nowrap;">Support à distance</a>
+            </div>
+          </div>
+
+          <div style="position: relative; margin-top: clamp(52px, 8vw, 108px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); border-top: 1px solid rgba(255,255,255,0.16);">
+            <div style="padding: 22px 22px 26px 0; display: flex; flex-direction: column; gap: 4px;">
+              <span style="font-size: clamp(22px, 2.4vw, 27px); font-weight: 600; letter-spacing: -0.03em;">&lt; 2 h</span>
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: #93A6C0;">Délai d'intervention</span>
+            </div>
+            <div style="padding: 22px; display: flex; flex-direction: column; gap: 4px; border-left: 1px solid rgba(255,255,255,0.16);">
+              <span style="font-size: clamp(22px, 2.4vw, 27px); font-weight: 600; letter-spacing: -0.03em;">312</span>
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: #93A6C0;">Postes supervisés</span>
+            </div>
+            <div style="padding: 22px; display: flex; flex-direction: column; gap: 4px; border-left: 1px solid rgba(255,255,255,0.16);">
+              <span style="font-size: clamp(22px, 2.4vw, 27px); font-weight: 600; letter-spacing: -0.03em;">100 %</span>
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: #93A6C0;">Hébergement suisse</span>
+            </div>
+            <div style="padding: 22px 0 26px 22px; display: flex; flex-direction: column; gap: 4px; border-left: 1px solid rgba(255,255,255,0.16);">
+              <span style="font-size: clamp(22px, 2.4vw, 27px); font-weight: 600; letter-spacing: -0.03em;">38 min</span>
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: #93A6C0;">Réponse moyenne</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="background: #F3F4F1; color: #10141A; padding: 76px clamp(16px, 4.5vw, 84px) 64px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 40px; align-items: start;">
+          <span style="display: flex; align-items: center; gap: 9px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #5E6A78; padding-top: 12px;"><span style="width: 7px; height: 7px; background: #1E62E0;"></span>Notre approche</span>
+          <div style="display: flex; flex-direction: column; gap: 26px;">
+            <h2 style="font-size: clamp(28px, 4vw, 44px); line-height: 1.06; letter-spacing: -0.032em; font-weight: 600; text-wrap: pretty;">Une installation stable, performante et sécurisée — <span style="color: #9AA4AF;">sur laquelle vous pouvez compter sans y penser.</span></h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 30px; max-width: 46em;">
+              <p style="font-size: 14.5px; line-height: 1.6; color: #4C5561;">Nous identifions avec vous les ressources nécessaires et anticipons les changements à venir. Du poste de travail au serveur, de l'adresse e-mail à l'environnement collaboratif complet.</p>
+              <p style="font-size: 14.5px; line-height: 1.6; color: #4C5561;">Basée à Lully (VD), Async IT est particulièrement active dans la région de Morges et intervient dans toute la Suisse romande — et parfois même au-delà.</p>
+            </div>
+            <a href="./Services.dc.html" style="display: flex; align-items: center; gap: 10px; align-self: flex-start; background: #10141A; color: #F3F4F1; padding: 11px 11px 11px 20px; border-radius: 100px; font-size: 14px; font-weight: 600;">Découvrir nos services <span style="display: flex; align-items: center; justify-content: center; width: 24px; height: 24px; border-radius: 50%; background: #F3F4F1; color: #10141A; font-size: 11px;">→</span></a>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));">
+          <div style="background: linear-gradient(170deg, #2E7BFF, #0E3FB0); color: #F4F8FF; padding: 34px 26px 30px; min-height: 250px; display: flex; flex-direction: column; gap: 12px;">
+            <div style="display: flex; align-items: baseline; justify-content: space-between;">
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.12em;">INFORMATIQUE</span>
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; opacity: 0.7;">01.</span>
+            </div>
+            <h3 style="font-size: 22px; font-weight: 600; letter-spacing: -0.02em; margin-top: auto;">Postes &amp; serveurs</h3>
+            <p style="font-size: 13.5px; line-height: 1.55; color: #DCE8FF;">Microsoft 365, serveurs, sauvegardes Veeam vérifiées. Un environnement livré prêt à l'emploi.</p>
+            <a href="./Services.dc.html" style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; padding-top: 6px;">En savoir plus →</a>
+          </div>
+          <div style="background: #0B1018; padding: 34px 26px 30px; min-height: 250px; display: flex; flex-direction: column; gap: 12px; border-right: 1px solid rgba(255,255,255,0.07);">
+            <div style="display: flex; align-items: baseline; justify-content: space-between;">
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #8FB4EE;">RÉSEAU</span>
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #566578;">02.</span>
+            </div>
+            <h3 style="font-size: 22px; font-weight: 600; letter-spacing: -0.02em; margin-top: auto;">Téléphonie &amp; Wi-Fi</h3>
+            <p style="font-size: 13.5px; line-height: 1.55; color: #9FAEC2;">Centraux 3CX, liaisons Swisscom, Wi-Fi professionnel segmenté et surveillé.</p>
+            <a href="./Services.dc.html" style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #8FB4EE; padding-top: 6px;">En savoir plus →</a>
+          </div>
+          <div style="background: #E9EBE6; color: #10141A; padding: 34px 26px 30px; min-height: 250px; display: flex; flex-direction: column; gap: 12px; border-right: 1px solid #DCDFD8;">
+            <div style="display: flex; align-items: baseline; justify-content: space-between;">
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #1E62E0;">SÉCURITÉ</span>
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #8A939E;">03.</span>
+            </div>
+            <h3 style="font-size: 22px; font-weight: 600; letter-spacing: -0.02em; margin-top: auto;">EDR &amp; réponse</h3>
+            <p style="font-size: 13.5px; line-height: 1.55; color: #4C5561;">With-Secure, Bitwarden, double authentification — et une intervention en cas de piratage.</p>
+            <a href="./Cybersecurite.dc.html" style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #1E62E0; padding-top: 6px;">En savoir plus →</a>
+          </div>
+          <div style="background: #E9EBE6; color: #10141A; padding: 34px 26px 30px; min-height: 250px; display: flex; flex-direction: column; gap: 12px;">
+            <div style="display: flex; align-items: baseline; justify-content: space-between;">
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #1E62E0;">CONSEIL</span>
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #8A939E;">04.</span>
+            </div>
+            <h3 style="font-size: 22px; font-weight: 600; letter-spacing: -0.02em; margin-top: auto;">Le bon outil</h3>
+            <p style="font-size: 13.5px; line-height: 1.55; color: #4C5561;">Arbitrer, budgéter, anticiper. Des décisions expliquées en français, pas en acronymes.</p>
+            <a href="./Cybersecurite.dc.html" style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #1E62E0; padding-top: 6px;">En savoir plus →</a>
+          </div>
+        </div>
+
+        <div style="background: #F3F4F1; color: #10141A; padding: 46px 0 42px; overflow: hidden;">
+          <div style="font-size: clamp(38px, 7.8vw, 92px); line-height: 1; letter-spacing: -0.045em; font-weight: 600; white-space: nowrap; margin-left: -60px; color: #10141A;">Morges — Lully — St-Prex — Lausanne — <span style="color: #C3C8C0;">Suisse romande</span></div>
+        </div>
+
+        <sc-if value="{{ showPricing }}" hint-placeholder-val="{{ true }}">
+        <div style="background: #F3F4F1; color: #10141A; padding: 8px clamp(16px, 4.5vw, 84px) clamp(48px, 6vw, 76px);">
+          <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 20px 30px; flex-wrap: wrap; margin-bottom: 34px;">
+            <div style="display: flex; flex-direction: column; gap: 14px;">
+              <span style="display: flex; align-items: center; gap: 9px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #5E6A78;"><span style="width: 7px; height: 7px; background: #1E62E0;"></span>Forfaits PME</span>
+              <h2 style="font-size: clamp(26px, 3.6vw, 40px); font-weight: 600; letter-spacing: -0.035em; line-height: 1.06;">Des prix annoncés,<br>pas des devis surprises.</h2>
+            </div>
+            <p style="font-size: 14px; color: #4C5561; max-width: 26em;">Par poste et par mois, sans engagement long. Particuliers : CHF 120.–/h, déplacement inclus dans un rayon de 20 km.</p>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 14px;">
+            <div style="background: #FFFFFF; border: 1px solid #E1E3DD; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 18px;">
+              <div style="display: flex; flex-direction: column; gap: 5px;">
+                <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #7A838F;">Essentiel</span>
+                <span style="font-size: clamp(30px, 3.2vw, 38px); font-weight: 600; letter-spacing: -0.035em;">CHF 29.–</span>
+                <span style="font-size: 13px; color: #7A838F;">par poste / mois</span>
+              </div>
+              <ul style="display: flex; flex-direction: column; gap: 9px; font-size: 14px; line-height: 1.45; color: #434C58;">
+                <li>Support à distance illimité</li>
+                <li>Antivirus &amp; mises à jour gérées</li>
+                <li>Inventaire du parc</li>
+                <li>Interventions sur site à l'heure</li>
+              </ul>
+              <a href="./Contact.dc.html" style="margin-top: auto; text-align: center; border: 1px solid #10141A; border-radius: 100px; padding: 12px; font-size: 14px; font-weight: 600;">Choisir</a>
+            </div>
+            <div style="border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 18px; color: #F4F8FF; background: radial-gradient(120% 80% at 50% 130%, rgba(190,220,255,0.85) 0%, rgba(70,140,255,0.8) 26%, rgba(16,50,150,0.55) 52%, rgba(6,10,24,0) 78%), #070C16; position: relative; overflow: hidden;">
+              <div style="display: flex; flex-direction: column; gap: 5px;">
+                <span style="align-self: flex-start; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.1em; border: 1px solid rgba(255,255,255,0.35); border-radius: 100px; padding: 5px 10px; margin-bottom: 6px;">LE PLUS CHOISI</span>
+                <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #A8C6F5;">Confiance</span>
+                <span style="font-size: clamp(30px, 3.2vw, 38px); font-weight: 600; letter-spacing: -0.035em;">CHF 49.–</span>
+                <span style="font-size: 13px; color: #C4D6F2;">par poste / mois</span>
+              </div>
+              <ul style="display: flex; flex-direction: column; gap: 9px; font-size: 14px; line-height: 1.45; color: #E4EDFB;">
+                <li>Tout Essentiel, plus :</li>
+                <li>Surveillance proactive 24/7</li>
+                <li>Sauvegardes Veeam vérifiées</li>
+                <li>Interventions sur site incluses</li>
+                <li>Point de situation trimestriel</li>
+              </ul>
+              <a href="./Contact.dc.html" style="margin-top: auto; text-align: center; background: #F4F7FB; color: #04060C; border-radius: 100px; padding: 13px; font-size: 14px; font-weight: 600;">Choisir</a>
+            </div>
+            <div style="background: #FFFFFF; border: 1px solid #E1E3DD; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 18px;">
+              <div style="display: flex; flex-direction: column; gap: 5px;">
+                <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #7A838F;">Sérénité</span>
+                <span style="font-size: clamp(30px, 3.2vw, 38px); font-weight: 600; letter-spacing: -0.035em;">CHF 79.–</span>
+                <span style="font-size: 13px; color: #7A838F;">par poste / mois</span>
+              </div>
+              <ul style="display: flex; flex-direction: column; gap: 9px; font-size: 14px; line-height: 1.45; color: #434C58;">
+                <li>Tout Confiance, plus :</li>
+                <li>EDR managé &amp; réponse à incident</li>
+                <li>Téléphonie 3CX administrée</li>
+                <li>Priorité d'intervention 1 h</li>
+                <li>Feuille de route IT annuelle</li>
+              </ul>
+              <a href="./Contact.dc.html" style="margin-top: auto; text-align: center; border: 1px solid #10141A; border-radius: 100px; padding: 12px; font-size: 14px; font-weight: 600;">Choisir</a>
+            </div>
+          </div>
+        </div>
+        </sc-if>
+
+        <div style="padding: 72px clamp(16px, 4.5vw, 84px) 64px; background: #04060C;">
+          <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 18px 30px; flex-wrap: wrap; margin-bottom: 28px;">
+            <h2 style="font-size: clamp(25px, 3.4vw, 36px); font-weight: 600; letter-spacing: -0.035em;">Interventions récentes</h2>
+            <a href="./Nouvelles.dc.html" style="display: flex; align-items: center; gap: 9px; border: 1px solid rgba(255,255,255,0.22); border-radius: 100px; padding: 9px 9px 9px 18px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #EEF2F8;">Toutes les références <span style="display: flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; background: #2E7BFF; color: #04060C; font-size: 11px;">→</span></a>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 14px;">
+            <div style="border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column;">
+              <div style="height: 232px; background: radial-gradient(100% 120% at 20% 110%, rgba(160,200,255,0.8), rgba(40,110,240,0.5) 35%, rgba(6,10,20,0) 72%), repeating-linear-gradient(90deg, rgba(255,255,255,0.04) 0 1px, transparent 1px 54px), #080D16; display: flex; align-items: flex-end; padding: 16px;">
+                <span style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; color: #A6B7CE; background: rgba(4,6,12,0.6); padding: 6px 9px; border-radius: 4px;">photo — bureaux du client (paysage, 1400×800)</span>
+              </div>
+              <div style="padding: 24px; display: flex; flex-direction: column; gap: 11px;">
+                <div style="display: flex; align-items: center; gap: 14px; font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase;"><span style="color: #8FB4EE;">Étude de cas</span><span style="color: #566578;">Fiduciaire · 14 postes</span></div>
+                <h3 style="font-size: clamp(20px, 2.2vw, 25px); font-weight: 600; letter-spacing: -0.025em; line-height: 1.14;">Migration vers Microsoft 365 en un week-end</h3>
+                <p style="font-size: 14px; line-height: 1.55; color: #9FAEC2; max-width: 34em;">Boîtes aux lettres, fichiers et signatures transférés du vendredi soir au dimanche. Zéro courriel perdu, reprise du travail le lundi matin sans formation lourde.</p>
+                <a href="./Nouvelles.dc.html" style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #8FB4EE; padding-top: 4px;">Lire l'étude →</a>
+              </div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 14px;">
+              <div style="border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; padding: 22px; display: flex; flex-direction: column; gap: 9px; background: #080D16;">
+                <div style="display: flex; align-items: center; gap: 12px; font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase;"><span style="color: #8FB4EE;">Téléphonie</span><span style="color: #566578;">Cabinet médical · 3 sites</span></div>
+                <h3 style="font-size: 18px; font-weight: 600; letter-spacing: -0.02em;">Un central 3CX pour trois cabinets</h3>
+                <p style="font-size: 13.5px; line-height: 1.5; color: #9FAEC2;">Un seul numéro, transferts entre sites, facture de téléphonie divisée par deux.</p>
+              </div>
+              <div style="border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; padding: 22px; display: flex; flex-direction: column; gap: 9px; background: #080D16;">
+                <div style="display: flex; align-items: center; gap: 12px; font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase;"><span style="color: #8FB4EE;">Incident</span><span style="color: #566578;">Particulier · Morges</span></div>
+                <h3 style="font-size: 18px; font-weight: 600; letter-spacing: -0.02em;">Après un piratage de messagerie</h3>
+                <p style="font-size: 13.5px; line-height: 1.5; color: #9FAEC2;">Comptes reprisés, double authentification partout, sauvegardes remises en route.</p>
+              </div>
+              <div style="border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; padding: 22px; display: flex; flex-direction: column; gap: 9px; background: #080D16;">
+                <div style="display: flex; align-items: center; gap: 12px; font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase;"><span style="color: #8FB4EE;">Nouvelles</span><span style="color: #566578;">4 septembre 2026</span></div>
+                <h3 style="font-size: 18px; font-weight: 600; letter-spacing: -0.02em;">Fin du support de Windows 10 : ce qu'il faut prévoir</h3>
+                <p style="font-size: 13.5px; line-height: 1.5; color: #9FAEC2;">Notre calendrier de remplacement des postes, poste par poste, sans arrêt d'activité.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <sc-if value="{{ showTestimonials }}" hint-placeholder-val="{{ true }}">
+        <div style="padding: 66px clamp(16px, 4.5vw, 84px) 62px; background: radial-gradient(120% 130% at 50% 140%, rgba(200,226,255,0.55) 0%, rgba(60,130,250,0.45) 26%, rgba(12,36,110,0.3) 52%, rgba(4,6,12,0) 78%), #04060C; border-top: 1px solid rgba(255,255,255,0.07);">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 30px;">
+            <div style="display: flex; flex-direction: column; gap: 14px;">
+              <p style="font-size: clamp(16px, 1.7vw, 19px); line-height: 1.4; letter-spacing: -0.015em;">« On appelle, ça décroche, et la personne connaît déjà notre installation. »</p>
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: #A3B6D0;">Directrice, fiduciaire — Morges</span>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 14px;">
+              <p style="font-size: clamp(16px, 1.7vw, 19px); line-height: 1.4; letter-spacing: -0.015em;">« Le passage au cloud s'est fait sans que l'équipe s'en rende compte. »</p>
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: #A3B6D0;">Associé, bureau d'ingénieurs — St-Prex</span>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 14px;">
+              <p style="font-size: clamp(16px, 1.7vw, 19px); line-height: 1.4; letter-spacing: -0.015em;">« Des explications claires, sans jargon, et un budget tenu. »</p>
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: #A3B6D0;">Gérant, commerce de détail — Lausanne</span>
+            </div>
+          </div>
+        </div>
+        </sc-if>
+
+        <div style="padding: 46px clamp(16px, 4.5vw, 84px); background: #04060C; border-top: 1px solid rgba(255,255,255,0.07);">
+          <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px 24px; flex-wrap: wrap; margin-bottom: 22px;">
+            <span style="display: flex; align-items: center; gap: 9px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #7E8FA8;"><span style="width: 7px; height: 7px; background: #2E7BFF;"></span>Partenaires &amp; solutions déployées</span>
+            <span style="font-size: 13.5px; color: #8B9AB0;">Comptes partenaires et certifications à jour</span>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 130px), 1fr)); gap: 10px;">
+            <div style="border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 20px 8px; text-align: center; font-size: 13.5px; font-weight: 500; color: #C3CFDF;">Microsoft</div>
+            <div style="border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 20px 8px; text-align: center; font-size: 13.5px; font-weight: 500; color: #C3CFDF;">Swisscom</div>
+            <div style="border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 20px 8px; text-align: center; font-size: 13.5px; font-weight: 500; color: #C3CFDF;">Infomaniak</div>
+            <div style="border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 20px 8px; text-align: center; font-size: 13.5px; font-weight: 500; color: #C3CFDF;">3CX</div>
+            <div style="border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 20px 8px; text-align: center; font-size: 13.5px; font-weight: 500; color: #C3CFDF;">With&#8209;Secure</div>
+            <div style="border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 20px 8px; text-align: center; font-size: 13.5px; font-weight: 500; color: #C3CFDF;">Bitwarden</div>
+            <div style="border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 20px 8px; text-align: center; font-size: 13.5px; font-weight: 500; color: #C3CFDF;">Veeam</div>
+          </div>
+        </div>
+
+        <div style="background: #F3F4F1; color: #10141A; padding: 70px clamp(16px, 4.5vw, 84px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: clamp(32px, 4vw, 52px);">
+          <div style="display: flex; flex-direction: column; gap: 22px;">
+            <h2 style="font-size: clamp(24px, 3vw, 32px); font-weight: 600; letter-spacing: -0.03em;">Questions fréquentes</h2>
+            <div style="display: flex; flex-direction: column;">
+              <div style="border-top: 1px solid #10141A; padding: 18px 0; display: flex; flex-direction: column; gap: 7px;">
+                <h4 style="font-size: 15.5px; font-weight: 600;">Intervenez-vous chez les particuliers ?</h4>
+                <p style="font-size: 13.5px; line-height: 1.55; color: #4C5561;">Oui : dépannage, configuration, changement de poste et intervention après piratage.</p>
+              </div>
+              <div style="border-top: 1px solid #DCDFD8; padding: 18px 0; display: flex; flex-direction: column; gap: 7px;">
+                <h4 style="font-size: 15.5px; font-weight: 600;">Où sont hébergées nos données ?</h4>
+                <p style="font-size: 13.5px; line-height: 1.55; color: #4C5561;">En Suisse, chez Infomaniak ou Swisscom selon la solution retenue.</p>
+              </div>
+              <div style="border-top: 1px solid #DCDFD8; padding: 18px 0; display: flex; flex-direction: column; gap: 7px;">
+                <h4 style="font-size: 15.5px; font-weight: 600;">Faut-il un contrat de longue durée ?</h4>
+                <p style="font-size: 13.5px; line-height: 1.55; color: #4C5561;">Non. Les forfaits sont mensuels, résiliables pour la fin d'un trimestre.</p>
+              </div>
+              <div style="border-top: 1px solid #DCDFD8; border-bottom: 1px solid #DCDFD8; padding: 18px 0; display: flex; flex-direction: column; gap: 7px;">
+                <h4 style="font-size: 15.5px; font-weight: 600;">Reprenez-vous une installation existante ?</h4>
+                <p style="font-size: 13.5px; line-height: 1.55; color: #4C5561;">Systématiquement : nous commençons par un état des lieux documenté, offert.</p>
+              </div>
+            </div>
+          </div>
+          <div style="border-radius: 16px; padding: 34px; color: #EEF2F8; background: radial-gradient(120% 90% at 50% 135%, rgba(200,226,255,0.9) 0%, rgba(70,140,255,0.8) 24%, rgba(16,50,150,0.5) 50%, rgba(6,10,20,0) 78%), #070C16; display: flex; flex-direction: column; gap: 16px;">
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #A8C6F5;">Contact</span>
+              <h2 style="font-size: clamp(24px, 2.8vw, 30px); font-weight: 600; letter-spacing: -0.03em;">Prenons un café.</h2>
+              <p style="font-size: 14px; line-height: 1.55; color: #C4D2E6;">Deux lignes suffisent. Nous rappelons le jour même.</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr)); gap: 10px; font-size: 13px; color: #93A6C0;">
+              <div style="background: rgba(4,8,16,0.45); border: 1px solid rgba(255,255,255,0.14); border-radius: 8px; padding: 12px 13px;">Nom et prénom</div>
+              <div style="background: rgba(4,8,16,0.45); border: 1px solid rgba(255,255,255,0.14); border-radius: 8px; padding: 12px 13px;">Entreprise (facultatif)</div>
+              <div style="background: rgba(4,8,16,0.45); border: 1px solid rgba(255,255,255,0.14); border-radius: 8px; padding: 12px 13px;">Courriel</div>
+              <div style="background: rgba(4,8,16,0.45); border: 1px solid rgba(255,255,255,0.14); border-radius: 8px; padding: 12px 13px;">Téléphone</div>
+            </div>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; font-size: 12.5px;">
+              <span style="border: 1px solid rgba(255,255,255,0.22); border-radius: 100px; padding: 7px 13px; color: #D6E0EE;">Support</span>
+              <span style="background: #F4F7FB; color: #04060C; border-radius: 100px; padding: 7px 13px; font-weight: 600;">Nouveau projet</span>
+              <span style="border: 1px solid rgba(255,255,255,0.22); border-radius: 100px; padding: 7px 13px; color: #D6E0EE;">Urgence</span>
+              <span style="border: 1px solid rgba(255,255,255,0.22); border-radius: 100px; padding: 7px 13px; color: #D6E0EE;">Devis</span>
+            </div>
+            <div style="background: rgba(4,8,16,0.45); border: 1px solid rgba(255,255,255,0.14); border-radius: 8px; padding: 12px 13px; font-size: 13px; color: #93A6C0; min-height: 78px;">Votre situation en quelques mots</div>
+            <a href="./Contact.dc.html" style="background: #F4F7FB; color: #04060C; text-align: center; border-radius: 100px; padding: 14px; font-weight: 600; font-size: 15px;">Envoyer la demande</a>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #A3B6D0;">021 512 40 40 · hello@async-it.ch · Chemin de Paudex 5, 1132 Lully</span>
+          </div>
+        </div>
+
+        <div style="background: #04060C; padding: 52px clamp(16px, 4.5vw, 84px) 0;">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 170px), 1fr)); gap: 32px; align-items: start; font-size: 13.5px; color: #93A6C0; padding-bottom: 44px;">
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+              <span style="font-weight: 600; font-size: 15px; color: #EEF2F8;">Async IT Sàrl</span>
+              <p style="line-height: 1.55;">Chemin de Paudex 5<br>1132 Lully · Suisse</p>
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #6A7A90;">Lu–Ve 8h–18h · hotline 24/7 sous forfait</span>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #EEF2F8;">Services</span>
+              <a href="./Services.dc.html">Informatique</a>
+              <a href="./Services.dc.html">Réseau et téléphone</a>
+              <a href="./Cybersecurite.dc.html">Cybersécurité</a>
+              <a href="./Support-a-distance.dc.html">Dépannage</a>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #EEF2F8;">Entreprise</span>
+              <a href="./Nouvelles.dc.html">Nouvelles</a>
+              <a href="./Support-a-distance.dc.html">Support à distance</a>
+              <a href="./Contact.dc.html">Contact</a>
+              <a href="./Contact.dc.html">Confidentialité</a>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #EEF2F8;">Suivre</span>
+              <a href="./Contact.dc.html">LinkedIn</a>
+              <a href="./Contact.dc.html">Facebook</a>
+              <a href="./Contact.dc.html">GitHub</a>
+            </div>
+          </div>
+          <div style="border-top: 1px solid rgba(255,255,255,0.09); padding-top: 18px; display: flex; align-items: flex-end; justify-content: space-between; gap: 16px 24px; flex-wrap: wrap;">
+            <div style="font-size: clamp(48px, 10vw, 118px); line-height: 0.9; letter-spacing: -0.05em; font-weight: 600; color: #EEF2F8;">Async IT</div>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; color: #6A7A90; padding-bottom: 14px;">© 2026 ASYNC IT SÀRL — TOUS DROITS RÉSERVÉS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showPricing&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Sections&quot;},&quot;showTestimonials&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Sections&quot;},&quot;showEmergencyBar&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Sections&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      showPricing: this.props.showPricing ?? true,
+      showTestimonials: this.props.showTestimonials ?? true,
+      showEmergencyBar: this.props.showEmergencyBar ?? true,
+    };
+  }
+}
+</script>
+</body>
+</html>
