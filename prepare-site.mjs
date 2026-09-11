@@ -126,7 +126,7 @@ function clean(source, page) {
 
   html = html.replace(
     /<div style="width: 26px; height: 26px; border-radius: 7px; background: linear-gradient\(150deg, #8FBAFF, #1E62E0\); color: #04060C; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 15px;">A<\/div>\s*<span style="font-weight: 600; font-size: 14\.5px; letter-spacing: -0\.01em;">Async IT<\/span>/g,
-    '<img src="./assets/async-logo-white.png" alt="Async IT" style="display: block; width: clamp(96px, 8vw, 118px); height: auto; max-height: 26px; object-fit: contain;">'
+    '<img src="./assets/async-blanc.png" alt="Async IT" style="display: block; width: clamp(96px, 8vw, 118px); height: auto; max-height: 26px; object-fit: contain;">'
   );
 
   if (page.output === "contact.html") {
