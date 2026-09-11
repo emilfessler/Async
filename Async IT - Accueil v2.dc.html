@@ -138,7 +138,12 @@
         </div>
 
         <div style="background: #F3F4F1; color: #10141A; padding: 46px 0 42px; overflow: hidden;">
-          <div style="font-size: clamp(38px, 7.8vw, 92px); line-height: 1; letter-spacing: -0.045em; font-weight: 600; white-space: nowrap; margin-left: -60px; color: #10141A;">Morges — Lully — St-Prex — Lausanne — <span style="color: #C3C8C0;">Suisse romande</span></div>
+          <div class="location-ticker" aria-label="Zones d’intervention : Morges, Lully, St-Prex, Lausanne et Suisse romande">
+            <div class="location-ticker-track">
+              <div class="location-ticker-item">Morges — Lully — St-Prex — Lausanne — <span>Suisse romande</span> —&nbsp;</div>
+              <div class="location-ticker-item" aria-hidden="true">Morges — Lully — St-Prex — Lausanne — <span>Suisse romande</span> —&nbsp;</div>
+            </div>
+          </div>
         </div>
 
         <sc-if value="{{ showPricing }}" hint-placeholder-val="{{ true }}">
